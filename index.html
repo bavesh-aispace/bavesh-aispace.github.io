@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bavesh Krishna – Agentic SaaS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: radial-gradient(circle at center, #0f172a 20%, #0a0f1d 100%);
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #38bdf8, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .glow-card {
+        background: rgba(30, 41, 59, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .glow-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 20px #6366f1;
+      }
+
+      .node-line {
+        height: 2px;
+        background: linear-gradient(to right, #38bdf8, #6366f1);
+        width: 100%;
+        margin: 1rem 0;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Header -->
+    <nav class="w-full bg-slate-900 bg-opacity-60 backdrop-blur-md py-3 px-6 flex justify-between items-center fixed top-0 z-50 border-b border-slate-700">
+      <div class="text-sm sm:text-base text-white">
+        <span class="gradient-text font-semibold">Bavesh Krishna</span> – Founder,FlowKube
+      </div>
+      <div class="space-x-4 text-sm">
+        <a href="mailto:baveshkrishnap@gmail.com" class="text-cyan-300 hover:underline">Email</a>
+        <a href="https://github.com/bavesh-aispace" class="text-cyan-300 hover:underline">GitHub</a>
+        <a href="" class="text-cyan-300 hover:underline">Resume</a>
+
+      </div>
+    </nav>
+
+    <!-- Spacer for fixed nav -->
+    <div class="h-16"></div>
+
+    <!-- Product Intro -->
+    <section class="text-center px-4 py-10 max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold gradient-text mb-4">Meet FlowKube</h2>
+      <p class="text-slate-300 text-lg">
+        FlowKube is an open-source agentic SaaS platform that empowers developers and teams to design, deploy,
+        and manage autonomous workflows using AI agents. Seamlessly connect tools, functions, and models to
+        create powerful, interactive automations that work across your stack.
+      </p>
+    </section>
+
+    <!-- Animated Agent Workflow Simulation -->
+    <section class="relative flex flex-col items-center px-4 py-12">
+      <h2 class="text-3xl font-bold mb-8 gradient-text text-center">⚙️ Agentic Workflow Simulation</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full items-center">
+        <div class="glow-card p-4 rounded-lg text-sm">
+          <h3 class="text-pink-400 font-bold mb-2">🧮 Function 1</h3>
+          <textarea class="w-full bg-slate-800 p-2 rounded text-white" rows="4" placeholder="Write JavaScript..."></textarea>
+        </div>
+
+        <div class="glow-card p-4 rounded-lg text-sm">
+          <h3 class="text-purple-400 font-bold mb-2">🧠 Agent 1</h3>
+          <input class="w-full bg-slate-800 p-2 mb-2 rounded" placeholder="Enter System Prompt" />
+          <input class="w-full bg-slate-800 p-2 mb-2 rounded" placeholder="User Context" />
+          <select class="w-full bg-slate-800 p-2 rounded">
+            <option>GPT-4o</option>
+            <option>GPT-3.5</option>
+          </select>
+        </div>
+
+        <div class="glow-card p-4 rounded-lg text-sm">
+          <h3 class="text-green-400 font-bold mb-2">🔀 Router 1</h3>
+          <textarea class="w-full bg-slate-800 p-2 rounded mb-2" placeholder="Enter routing prompt..."></textarea>
+          <select class="w-full bg-slate-800 p-2 rounded">
+            <option>GPT-4o</option>
+          </select>
+        </div>
+
+        <div class="glow-card p-4 rounded-lg text-sm">
+          <h3 class="text-pink-300 font-bold mb-2">💬 Slack 1</h3>
+          <input class="w-full bg-slate-800 p-2 mb-2 rounded" placeholder="#general" />
+          <textarea class="w-full bg-slate-800 p-2 rounded" placeholder="Enter your alert message..."></textarea>
+        </div>
+      </div>
+
+      <!-- Connecting Lines (simulate flow) -->
+      <div class="node-line mt-6"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="text-center px-4 py-12 bg-slate-800 bg-opacity-40 mt-10">
+      <h2 class="text-2xl font-semibold gradient-text mb-2">Connect With Me</h2>
+      <p class="text-slate-300 mb-4">I'm always open to collaborations, ideas, or feedback.</p>
+      <div class="space-x-4">
+        <a href="mailto:baveshkrishnap@gmail.com" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white">Email Me</a>
+        <a href="https://github.com/bavesh-aispace" target="_blank" class="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-lg text-white">GitHub</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-slate-500 py-10">
+      © 2025 Bavesh Krishna – Built with code, vision & agents.
+    </footer>
+  </body>
+</html>
