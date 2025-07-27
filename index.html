@@ -38,6 +38,23 @@
         margin: 1rem 0;
         opacity: 0.3;
       }
+        @keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  .animate-fadeInLeft {
+    animation: fadeInLeft 1s ease forwards;
+  }
+
+  .animate-fadeInRight {
+    animation: fadeInRight 1s ease forwards;
+  }
     </style>
   </head>
 
@@ -45,12 +62,12 @@
     <!-- Navbar Header -->
     <nav class="w-full bg-slate-900 bg-opacity-60 backdrop-blur-md py-3 px-6 flex justify-between items-center fixed top-0 z-50 border-b border-slate-700">
       <div class="text-sm sm:text-base text-white">
-        <span class="gradient-text font-semibold">Bavesh Krishna</span> – Founder & CEO, Agentic SaaS
+        <span class="gradient-text font-semibold">Bavesh Krishna</span> – Founder, FlowKube
       </div>
       <div class="space-x-4 text-sm">
         <a href="mailto:baveshkrishnap@gmail.com" class="text-cyan-300 hover:underline">Email</a>
         <a href="https://github.com/bavesh-aispace" class="text-cyan-300 hover:underline">GitHub</a>
-        <a href="hhttps://github.com/bavesh-aispace/bavesh-aispace.github.io/resume.pdf" target="_blank">Resume</a>
+        <a href="https://github.com/bavesh-aispace/bavesh-aispace.github.io/resume.pdf" target="_blank">Resume</a>
       </div>
     </nav>
 
@@ -68,39 +85,90 @@
     </section>
 
     <!-- Animated Agent Workflow Simulation -->
-    <section class="relative flex flex-col items-center px-4 py-12">
-      <h2 class="text-3xl font-bold mb-8 gradient-text text-center">⚙️ Agentic Workflow Simulation</h2>
+   <section id="architecture" class="bg-[#0b1625] text-white py-12 px-4">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10 text-white">Workflow</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full items-center">
-        <div class="glow-card p-4 rounded-lg text-sm">
-          <h3 class="text-pink-400 font-bold mb-2">🧮 Function 1</h3>
-          <textarea class="w-full bg-slate-800 p-2 rounded text-white" rows="4" placeholder="Write JavaScript..."></textarea>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+      
+      <!-- SOURCES -->
+      <div class="space-y-4">
+        <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInLeft">
+          🧑‍💻 Any Programming Language
         </div>
-
-        <div class="glow-card p-4 rounded-lg text-sm">
-          <h3 class="text-purple-400 font-bold mb-2">🧠 Agent 1</h3>
-          <input class="w-full bg-slate-800 p-2 mb-2 rounded" placeholder="Enter System Prompt" />
-          <input class="w-full bg-slate-800 p-2 mb-2 rounded" placeholder="User Context" />
-          <select class="w-full bg-slate-800 p-2 rounded">
-            <option>GPT-4o</option>
-            <option>GPT-3.5</option>
-          </select>
+        <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInLeft">
+          🛠️ Any Development Environment
         </div>
-
-        <div class="glow-card p-4 rounded-lg text-sm">
-          <h3 class="text-green-400 font-bold mb-2">🔀 Router 1</h3>
-          <textarea class="w-full bg-slate-800 p-2 rounded mb-2" placeholder="Enter routing prompt..."></textarea>
-          <select class="w-full bg-slate-800 p-2 rounded">
-            <option>GPT-4o</option>
-          </select>
+        <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInLeft">
+          🔗 200+ Data Sources
         </div>
-
-        <div class="glow-card p-4 rounded-lg text-sm">
-          <h3 class="text-pink-300 font-bold mb-2">💬 Slack 1</h3>
-          <input class="w-full bg-slate-800 p-2 mb-2 rounded" placeholder="#general" />
-          <textarea class="w-full bg-slate-800 p-2 rounded" placeholder="Enter your alert message..."></textarea>
-        </div>
+        <div class="text-center text-blue-400 font-semibold mt-2 tracking-wide">SOURCES</div>
       </div>
+
+      <!-- MLOps CORE -->
+      <div class="space-y-4">
+        <div class="bg-[#1f1e87] p-4 rounded-xl shadow text-center text-xl font-bold animate-pulse">
+          🧠 DataRobot MLOps
+          <p class="text-xs font-normal mt-1 text-slate-300">Dashboards • Diagnostics • Alerts</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-[#1c2a3a] p-4 rounded-xl shadow">
+            <h3 class="text-yellow-400 font-semibold mb-2">🛡️ ML Governance</h3>
+            <ul class="list-disc list-inside text-xs text-slate-300">
+              <li>Central Registry</li>
+              <li>Model Versioning</li>
+              <li>Approval Workflows</li>
+              <li>Audit Trails</li>
+            </ul>
+          </div>
+          <div class="bg-[#1c2a3a] p-4 rounded-xl shadow">
+            <h3 class="text-green-400 font-semibold mb-2">📈 ML Performance</h3>
+            <ul class="list-disc list-inside text-xs text-slate-300">
+              <li>Service Health</li>
+              <li>Data Drift</li>
+              <li>Challenger Analysis</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-[#1c2a3a] p-4 rounded-xl text-center text-purple-300 font-semibold shadow">
+            🔐 ML Trust
+            <p class="text-xs mt-1 text-slate-300">Bias Detection • Virtualization</p>
+          </div>
+          <div class="bg-[#1c2a3a] p-4 rounded-xl text-center text-orange-300 text-sm shadow">
+            ⚙️ Automation
+            <p class="text-xs mt-1 text-slate-300">Retraining • Production History</p>
+          </div>
+        </div>
+
+        <div class="text-center text-xs text-blue-400 mt-1 tracking-wide">LOGICAL DATA MANAGEMENT</div>
+      </div>
+
+      <!-- CONSUMERS -->
+      <div class="space-y-4">
+        <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInRight">
+          💬 Messaging Systems
+        </div>
+        <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInRight">
+          🤖 AI-Driven Applications
+        </div>
+        <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInRight">
+          📊 BI & Analytics
+        </div>
+        <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInRight">
+          📱 DataRobot Applications
+        </div>
+        <div class="text-center text-blue-400 font-semibold mt-2 tracking-wide">CONSUMERS</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
       <!-- Connecting Lines (simulate flow) -->
       <div class="node-line mt-6"></div>
@@ -113,7 +181,7 @@
       <div class="space-x-4">
         <a href="mailto:baveshkrishnap@gmail.com" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white">Email Me</a>
         <a href="https://github.com/bavesh-aispace" target="_blank" class="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-lg text-white">GitHub</a>
-        <a href="resume.pdf" target="_blank" class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-lg text-white">Resume</a>
+        <a href="https://github.com/bavesh-aispace/bavesh-aispace.github.io/resume.pdf" target="_blank" class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-lg text-white">Resume</a>
       </div>
     </section>
 
