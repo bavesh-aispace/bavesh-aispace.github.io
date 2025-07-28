@@ -55,6 +55,29 @@
   .animate-fadeInRight {
     animation: fadeInRight 1s ease forwards;
   }
+
+  .animated-line-horizontal {
+  background-image: repeating-linear-gradient(
+    to right,
+    white,
+    white 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  animation: scrollDotsHorizontal 1s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes scrollDotsHorizontal {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10px 0;
+  }
+}
+
+  
     </style>
   </head>
 
@@ -85,15 +108,14 @@
       </p>
     </section>
 
-    <!-- Animated Agent Workflow Simulation -->
-   <section id="architecture" class="bg-[#0b1625] text-white py-12 px-4">
+<section id="architecture" class="bg-[#0b1625] text-white py-12 px-4">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-10 text-white">Workflow</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-      
-      <!-- SOURCES -->
-      <div class="space-y-4">
+    <div class="relative flex flex-col md:flex-row md:justify-between gap-6 text-sm items-start md:items-stretch">
+
+      <!-- SOURCES BOX -->
+      <div class="relative flex-1 border border-white/30 rounded-xl p-4 space-y-4">
         <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInLeft">
           🧑‍💻 Any Programming Language
         </div>
@@ -106,8 +128,13 @@
         <div class="text-center text-blue-400 font-semibold mt-2 tracking-wide">SOURCES</div>
       </div>
 
-      <!-- MLOps CORE -->
-      <div class="space-y-4">
+      <!-- HORIZONTAL LINE 1 (centered vertically) -->
+      <div class="hidden md:flex items-center justify-center w-12">
+        <div class="animated-line-horizontal w-full h-[2px]"></div>
+      </div>
+
+      <!-- LOGICAL DATA MANAGEMENT BOX -->
+      <div class="relative flex-1 border border-white/30 rounded-xl p-4 space-y-4">
         <div class="bg-[#1f1e87] p-4 rounded-xl shadow text-center text-xl font-bold animate-pulse">
           🧠 DataRobot MLOps
           <p class="text-xs font-normal mt-1 text-slate-300">Dashboards • Diagnostics • Alerts</p>
@@ -147,8 +174,13 @@
         <div class="text-center text-xs text-blue-400 mt-1 tracking-wide">LOGICAL DATA MANAGEMENT</div>
       </div>
 
-      <!-- CONSUMERS -->
-      <div class="space-y-4">
+      <!-- HORIZONTAL LINE 2 (centered vertically) -->
+      <div class="hidden md:flex items-center justify-center w-12">
+        <div class="animated-line-horizontal w-full h-[2px]"></div>
+      </div>
+
+      <!-- CONSUMERS BOX -->
+      <div class="relative flex-1 border border-white/30 rounded-xl p-4 space-y-4">
         <div class="bg-[#1c2a3a] p-4 rounded-xl shadow text-center animate-fadeInRight">
           💬 Messaging Systems
         </div>
@@ -167,6 +199,7 @@
     </div>
   </div>
 </section>
+
 
 
 
